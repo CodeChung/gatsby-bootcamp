@@ -1,13 +1,13 @@
 import React from 'react'
+
 import Layout from '../components/layout'
 
-const ContactPage = () => {
+const Blog = () => {
     return (
         <Layout>
-            <h1>Contact</h1>
-            <p>Rang Rang</p>
+            This is the blog template
         </Layout>
     )
 }
 
-export default ContactPage
+export default Blog

@@ -1,15 +1,40 @@
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Layout from '../components/layout'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 const BlogPage = () => {
+    const blogData = useStaticQuery(graphql`
+        query {
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            date
+                        }
+                        html
+                        excerpt
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+    `)
+    const blogPosts = blogData.allMarkdownRemark.edges.map((post, index) => (
+        <li key={index} className='blog-post'>
+            <Link to={`/blog/${post.node.fields.slug}`}>
+                <h2>{post.node.frontmatter.title}</h2> 
+                <p>{post.node.frontmatter.date}</p>
+            </Link>
+        </li>
+    ))
     return (
-        <div>
-            <Header />
+        <Layout>
             <h1>Blog</h1>
-            <p>Posts will show up here later on.</p>
-            <Footer />
-        </div>
+            <ol>{blogPosts}</ol>
+        </Layout>
     )
 }
 
