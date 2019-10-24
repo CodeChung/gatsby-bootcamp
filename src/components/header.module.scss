@@ -66,12 +66,15 @@ button {
     border: 2px solid rgb(163, 146, 130);
     border-radius: 50px;
     height: 75px;
+    max-height: 75px;
     overflow: hidden;
-    transition: .35s;
+    // transition: .35s ease-out;
 }
 
 .nav-list-active {
     height: auto;
+    max-height: 1000px;
+    transition: .35s;
 }
 
 .nav-item {
