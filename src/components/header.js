@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { FiCoffee, FiHome, FiFeather, FiUmbrella,   } from 'react-icons/fi'
-import { TiThumbsOk } from 'react-icons/ti'
+import { FiCoffee, FiHome, FiFeather, } from 'react-icons/fi'
+import { TiThumbsOk, } from 'react-icons/ti'
+import { GiOldKing } from 'react-icons/gi'
 
 import headerStyles from './header.module.scss'
 import HoverIcon from './HoverIcon/hoverIcon'
@@ -12,7 +13,7 @@ import WebButlerPhillips from './WebButlerPhillips/WebButlerPhillips'
 const pageIcons = {
     home: <FiHome />,
     projects: <TiThumbsOk />,
-    about: <FiUmbrella />,
+    about: <GiOldKing />,
     blog: <FiFeather />,
     contact: <FiCoffee />,
 }

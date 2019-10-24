@@ -9,7 +9,7 @@ const IndexPage = () => {
         <Layout view='home' className={indexStyles.index}>
             <Head view='home' title='Home' />
             <h1>Hi there.</h1>
-            <h2>I'm Harry, a full-stack web developer with a passion for making exciting websites.</h2>
+            <h2>I'm Harry, a full-stack web developer with a passion for making exciting websites using the latest technologies including React and Node.js.</h2>
             <button>Let's build a website</button> | <button>I want to hire you</button>
         </Layout>
     )

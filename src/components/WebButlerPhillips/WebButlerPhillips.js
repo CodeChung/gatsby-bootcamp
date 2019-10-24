@@ -19,8 +19,8 @@ const WebButlerPhillips = (props) => {
             </div>
             <div className={webButlerBody.face}>
                 <div className={webButlerBody.eyes}>
-                    <div className={webButlerBody.eye}></div>
-                    <div className={webButlerBody.eye}></div>
+                    <div className={webButlerBody.eye} />
+                    <div className={webButlerBody.eye} />
                 </div>
             </div>
             <h2>Web Butler<br />Phillips</h2>

@@ -36,6 +36,7 @@ const BlogPage = () => {
         <Layout view='blog'>
             <Head view='blog' title='Blog' />
             <h1>Blog</h1>
+            <h3 className={blogStyles.tagline}>A place where I share some of my experiences as a developer</h3>
             <ol className={blogStyles.posts}>
                 {blogPosts}
             </ol>
