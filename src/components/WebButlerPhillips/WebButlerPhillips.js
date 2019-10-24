@@ -7,15 +7,16 @@ const WebButlerPhillips = (props) => {
             onClick={props.incrementCount} 
             className={webButlerBody.faceContainer}>
             <script
+                src='js/butlerJuice.js'
                 dangerouslySetInnerHTML={{
                     __html: `
                         var name = 'world';
                         console.log('Hello ' + name)
                     `,
-                }}>
-
-            </script>
-            {props.count}
+                }} />
+            <div className={webButlerBody.count}>
+                {props.count}
+            </div>
             <div className={webButlerBody.face}>
                 <div className={webButlerBody.eyes}>
                     <div className={webButlerBody.eye}></div>
