@@ -17,6 +17,8 @@ const WebButlerPhillips = (props) => {
             <div className={webButlerBody.count}>
                 {props.count}
             </div>
+            <div className={webButlerBody.speech} />
+            <div className={webButlerBody.arrowDown}></div>
             <div className={webButlerBody.face}>
                 <div className={webButlerBody.eyes}>
                     <div className={webButlerBody.eye} />

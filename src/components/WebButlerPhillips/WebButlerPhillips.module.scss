@@ -1,8 +1,9 @@
 .count {
     position: relative;
     color: rgb(4, 58, 206);
-    top: 10px;
-    font-size: 30px;
+    top: -18px;
+    right: 12px;
+    font-size: 19px;
     z-index: 100000;
 }
 
@@ -83,4 +84,24 @@
         background: #333;
         border-radius: 50%;
     }
+}
+
+.speech {
+    color: cadetblue;
+    position: absolute;
+    background: chartreuse;
+    left: 15px;
+    width: 47px;
+    height: 55px;
+    bottom: 100px;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid chartreuse;
+  position: relative;
+  left: 5px;
 }
