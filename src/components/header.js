@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FiCoffee, FiHome, FiFeather, FiUmbrella,   } from 'react-icons/fi'
@@ -6,6 +6,7 @@ import { TiThumbsOk } from 'react-icons/ti'
 
 import headerStyles from './header.module.scss'
 import HoverIcon from './HoverIcon/hoverIcon'
+import WebButlerPhillips from './WebButlerPhillips/WebButlerPhillips'
 
 // this is where I'm storing the icons for each page
 const pageIcons = {
@@ -53,6 +54,7 @@ const Header = (props) => {
                     <li><AniLink paintDrip duration={.87} hex="#71e355" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/about'><HoverIcon active={active} view={view} icon={pageIcons.about} title='About' /></AniLink></li>
                     <li><AniLink paintDrip duration={.87} hex="#00ffc6" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/contact'><HoverIcon active={active} view={view} icon={pageIcons.contact} title='Contact' /></AniLink></li>
                     <li><AniLink paintDrip duration={.87} hex="#9db4f6" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/blog'><HoverIcon active={active} view={view} icon={pageIcons.blog} title='Blog' /></AniLink></li>
+                    <li><WebButlerPhillips /></li>
                 </ul>
             </nav>
         </header>
