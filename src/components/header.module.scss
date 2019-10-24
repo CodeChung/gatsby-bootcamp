@@ -2,29 +2,57 @@
     padding: 1rem 0 3rem;
 }
 
-.header:hover, .header:active {
-    .hamburger {
-        // display: none;
-    }
-
-}
-
-.hamburger {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    right: 85px;
-    top: 40px;
-}
-
 .title {
     color: #000;
     font-size: 3rem;
     text-decoration: none;
 }
 
+button {
+    outline: none;
+    background: azure;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.current-icon {
+    position: absolute;
+    right: 80px;
+    top: 60px;
+    display: block;
+    color: #2196f3;
+    letter-spacing: 4px;
+    font-size: 36px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 50px;
+    height: 75px;
+    width: 75px;
+    z-index: 1000;
+}
+
+.active {
+    background: #2196f3;
+}
+
+.current-icon:hover {
+    color: #255784;
+    background: #2196f3;
+    border: 1px solid #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.current-icon:active {
+    box-shadow: 0 0 10px #2196f3, 0 0 100px #2196f3, 0 0 200px #2196f3;
+}
+
+.ghost-link {
+    opacity: 0;
+}
+
 .nav-list {
+    background: rgba(255, 190, 190, 0.185);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -35,18 +63,19 @@
     right: 80px;
     top: 60px;
     flex-direction: column;
+    border: 2px solid rgb(163, 146, 130);
+    border-radius: 50px;
+    height: 75px;
+    overflow: hidden;
+    transition: .35s;
 }
 
-.nav-list:hover, .nav-list:active {
-    color: tint(#BADA55, 42%);
-    background: transparent;
-    border-radius: 50px;
-    border: 1px solid blue;
+.nav-list-active {
+    height: auto;
 }
 
 .nav-item {
     font-size: .9rem;
-    padding: 10px;
     text-decoration: none;
     transition: .2s ease;
 } 
