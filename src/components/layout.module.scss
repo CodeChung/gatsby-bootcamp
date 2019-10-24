@@ -1,7 +1,6 @@
 .container {
     margin: 0 auto;
-    max-width: 750px;
-    padding: 1rem;
+    padding: 5rem;
 
     display: flex;
     flex-direction: column;
@@ -10,4 +9,23 @@
 
 .content {
     flex-grow: 1;
+}
+
+/*~~~  views  ~~~*/
+
+.home {
+    background: black;
+    color: aquamarine;
+}
+
+.about {
+    background: #71e355;
+}
+
+.blog {
+    background: #9db4f6;
+}
+
+.contact {
+    background: #00ffc6;
 }

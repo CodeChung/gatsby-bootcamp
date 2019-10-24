@@ -33,8 +33,8 @@ const BlogPage = () => {
         </li>
     ))
     return (
-        <Layout>
-            <Head title='Blog' />
+        <Layout view='blog'>
+            <Head view='blog' title='Blog' />
             <h1>Blog</h1>
             <ol className={blogStyles.posts}>
                 {blogPosts}

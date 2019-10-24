@@ -2,6 +2,22 @@
     padding: 1rem 0 3rem;
 }
 
+.header:hover, .header:active {
+    .hamburger {
+        // display: none;
+    }
+
+}
+
+.hamburger {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    right: 85px;
+    top: 40px;
+}
+
 .title {
     color: #000;
     font-size: 3rem;
@@ -9,22 +25,46 @@
 }
 
 .nav-list {
+    text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     margin: 0;
+    position: absolute;
+    right: 80px;
+    top: 60px;
+    flex-direction: column;
+}
+
+.nav-list:hover, .nav-list:active {
+    color: tint(#BADA55, 42%);
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid blue;
 }
 
 .nav-item {
-    color: #999999;
     font-size: .9rem;
-    margin-right: 1.3rem;
+    padding: 10px;
     text-decoration: none;
+    transition: .2s ease;
 } 
 
 .nav-item:hover {
-    color: #666666;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 21px 16px rgba(206,89,55,0);
 }
 
 .active-nav-item {
-    color: #333333;
+    color: rgb(61, 131, 108);
+}
+
+/*~~~  Views  ~~~*/
+
+.home {
+    color: aquamarine;
+}
+
+.contact {
+    color: rgb(31, 3, 3);
 }
