@@ -7,7 +7,6 @@ import { GiOldKing } from 'react-icons/gi'
 
 import headerStyles from './header.module.scss'
 import HoverIcon from './HoverIcon/hoverIcon'
-import WebButlerPhillips from './WebButlerPhillips/WebButlerPhillips'
 
 // this is where I'm storing the icons for each page
 const pageIcons = {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import footerStyles from './footer.module.scss'
-import WebButlerPhillips from './WebButlerPhillips/WebButlerPhillips'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Footer = () => {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
 
 
 class ProjectBlock extends React.Component {

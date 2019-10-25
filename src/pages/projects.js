@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import Swiper from 'react-id-swiper'
 import projectsStyles from './projects.module.scss'
-import ProjectList from '../components/ProjectList/ProjectList'
 import ProjectBlock from '../components/ProjectBlock/ProjectBlock'
 
 
@@ -30,20 +29,17 @@ const Projects = () => {
     const projectData = useStaticQuery(graphql`
         query {
             allContentfulProject {
-                edges {
-                    node {
-                        title
-                        description
-                        image {
-                            file {
-                                url
-                            }
-                        }
-                        data {
-                            tools
-                        }
+            edges {
+                node {
+                    title
+                    description
+                    demo
+                    code
+                    data {
+                        tools
                     }
                 }
+            }
             }
         }
     `)
@@ -60,7 +56,7 @@ const Projects = () => {
                 {project.node.title}
                 {project.node.description}
             </div>
-            <img src={project.node.image.file.url} />
+            <img alt='project screenshot' src={project.node.image ? project.node.image.file.url : 'https://placecage.com/600/900'} />
         </div>    
     )
     const blocks = projectData.allContentfulProject.edges.map(project => (
@@ -82,12 +78,12 @@ const Projects = () => {
                             {projects}
                         </Swiper>
                     </div>
-                    <img className={projectsStyles.mac} src='https://snipboard.io/Xosvjf.jpg' alt='mac end'/>
+                    <img className={projectsStyles.mac} src='https://snipboard.io/Xosvjf.jpg' alt='mac end decoration'/>
                     <button onClick={goPrev}>Prev</button>
                     <button onClick={goNext}>Next</button>
                 </div>
             </div>
-
+            Under Construction
         </Layout>
     )
 }
