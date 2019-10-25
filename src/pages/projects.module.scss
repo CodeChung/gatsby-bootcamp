@@ -1,4 +1,47 @@
-.project-list {
-    background: blanchedalmond;
-    color: ghostwhite;
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-container {
+    width: 576px;
+    height: 324px;
+    margin-right: 80px;
+}
+
+.blurb {
+    position: absolute;
+    left: -300px;
+    display: none;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.swiper {
+    width: 99.6%;
+    border: 25px solid black;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+.slide {
+    box-sizing: border-box;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img {
+    object-fit:fill;
+    visibility: hidden;
+}
+
+.mac {
+    visibility: visible;
 }

@@ -50,7 +50,10 @@ class Layout extends React.Component {
                         />
                     {this.props.children}
                 </div>
-                <Footer />
+                <Footer 
+                    incrementCount={this.incrementCount}
+                    butlerCount={butlerCount}
+                    />
             </div>
         )
     }

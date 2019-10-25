@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FiCoffee, FiHome, FiFeather, } from 'react-icons/fi'
-import { TiThumbsOk, } from 'react-icons/ti'
+import { TiThumbsOk, TiPencil, } from 'react-icons/ti'
 import { GiOldKing } from 'react-icons/gi'
 
 import headerStyles from './header.module.scss'
@@ -35,13 +35,13 @@ const Header = (props) => {
         <header className={headerStyles.header}>
             <h1>
                 <AniLink paintDrip hex="#000000" className={headerStyles.title + ' ' + headerStyles[props.view]} to='/'>
-                    {data.site.siteMetadata.title}
+                    {data.site.siteMetadata.title} {view !== 'home' ? <span>/{view}</span> : ''}
                 </AniLink>
             </h1>
             <nav>
                 <button 
                     onClick={props.toggleNav}
-                    className={headerStyles.currentIcon}>{pageIcons[view]}</button>
+                    className={headerStyles.currentIcon}>{pageIcons[view] || <TiPencil />}</button>
                 <ul
                     onClick={() => {
                         if (!active) {
@@ -55,7 +55,6 @@ const Header = (props) => {
                     <li><AniLink paintDrip duration={.87} hex="#71e355" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/about'><HoverIcon active={active} view={view} icon={pageIcons.about} title='About' /></AniLink></li>
                     <li><AniLink paintDrip duration={.87} hex="#00ffc6" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/contact'><HoverIcon active={active} view={view} icon={pageIcons.contact} title='Contact' /></AniLink></li>
                     <li><AniLink paintDrip duration={.87} hex="#9db4f6" className={headerStyles.navItem + ' ' + headerStyles[props.view]} activeClassName={headerStyles.activeNavItem} to ='/blog'><HoverIcon active={active} view={view} icon={pageIcons.blog} title='Blog' /></AniLink></li>
-                    <li><WebButlerPhillips count={props.butlerCount} incrementCount={props.incrementCount}/></li>
                 </ul>
             </nav>
         </header>
