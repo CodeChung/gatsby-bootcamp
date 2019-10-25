@@ -12,9 +12,6 @@ const ContactPage = () => {
             <button>Let's Get you a job, young lad (Employers)</button>
 
             <ContactIcon />
-
-
-
         </Layout>
     )
 }
