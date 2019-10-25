@@ -48,7 +48,7 @@ const Projects = () => {
             key={project.node.title} 
             className={projectsStyles.slide}
             style={ {
-                background: `url(${project.node.image.file.url}) no-repeat center center`,
+                background: `url(${project.node.image ? project.node.image.file.url : 'https://www.placecage.com/768/432'}) no-repeat center center`,
                 'background-size': 'cover',
             } }
         >
@@ -56,7 +56,7 @@ const Projects = () => {
                 {project.node.title}
                 {project.node.description}
             </div>
-            <img alt='project screenshot' src={project.node.image ? project.node.image.file.url : 'https://placecage.com/600/900'} />
+            <img alt='project screenshot' src={project.node.image ? project.node.image.file.url : 'https://www.placecage.com/768/432'} />
         </div>    
     )
     const blocks = projectData.allContentfulProject.edges.map(project => (

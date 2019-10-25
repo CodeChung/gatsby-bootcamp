@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import { IoLogoGithub, IoLogoLinkedin, IoMdMail,  } from 'react-icons/io'
+import ContactIcon from '../components/ContactIcon/ContactIcon'
 
 const ContactPage = () => {
     return (
@@ -11,11 +11,10 @@ const ContactPage = () => {
             <button>Let's Make a Website (Clients)</button>
             <button>Let's Get you a job, young lad (Employers)</button>
 
-            <ul>
-                <IoLogoGithub />
-                <IoLogoLinkedin />
-                <IoMdMail />
-            </ul>
+            <ContactIcon />
+
+
+
         </Layout>
     )
 }
