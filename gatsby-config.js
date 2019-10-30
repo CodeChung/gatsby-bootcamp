@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV || "development"}`,
+})
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -15,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        spaceId: 'fp6z9j2svv9p' || process.env.CONTENTFUL_SPACE_ID,
+        accessToken: 'hFGRVqPrkIwzYZnTjLpy7MZK0yboU7IyF_tp-jXF0vc' || process.env.CONTENTFUL_ACCESS_TOKEN
 
       }
     },
