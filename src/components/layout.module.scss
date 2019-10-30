@@ -1,0 +1,31 @@
+.container {
+    margin: 0 auto;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+/*~~~  views  ~~~*/
+
+.home {
+    background: black;
+    color: aquamarine;
+}
+
+.about {
+    background: #71e355;
+}
+
+.blog {
+    background: #9ddd78;
+}
+
+.contact {
+    background: #00ffc6;
+}
